@@ -1,4 +1,4 @@
-# 💼 Plan de Negocio - Renova-Hub
+# 💼 Plan de Negocio - Renova
 
 > **Estado**: 📋 Pendiente - Desarrollar en Fase 2+
 
@@ -20,7 +20,7 @@ Este documento será desarrollado cuando el proyecto esté listo para transició
 
 - [ ] Estrategia de ingresos
 - [ ] Pricing de servicios
-- [ ] Comisiones de e-commerce
+- [ ] Platform fee sobre socios (ver ADR-0004 en `docs/decisions/`)
 
 ### 3. Responsabilidades
 

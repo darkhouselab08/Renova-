@@ -1,5 +1,8 @@
 # Perfil de Jorge Franco - Actualizado
 
+> ⚠️ **Nota (12-sep-2026):** las secciones de este perfil que describen el proyecto como "restauración de muebles" son pre-pivote. Renova pivotó a servicios del hogar — ver ADR-0004 en `docs/decisions/`. El resto del perfil (formación, estilo de trabajo) sigue vigente.
+
+
 ## 👤 Información Personal
 
 - **Nombre:** Jorge Franco

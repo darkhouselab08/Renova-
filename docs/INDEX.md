@@ -1,6 +1,26 @@
-# 📚 Índice de Documentación - Renova-Hub
+# 📚 Índice de Documentación - Renova
 
 > Guía rápida para navegar toda la documentación del proyecto
+
+---
+
+## 🧭 Doctrina del producto (fuente de verdad del negocio)
+
+Antes que la documentación técnica heredada del scaffold, leé el paquete de doctrina del
+producto (qué es Renova, modelo de negocio, roadmap, modelo de datos, seguridad y diseño):
+
+1. [OWNERSHIP.md](./OWNERSHIP.md) - Quién responde por qué
+2. [00-overview.md](./00-overview.md) - Qué es Renova (negocio + producto)
+3. [01-architecture.md](./01-architecture.md) - Stack, estructura, flujo de datos
+4. [02-roadmap.md](./02-roadmap.md) - Fases del producto
+5. [03-data-model.md](./03-data-model.md) - Tablas Supabase, ENUMs, RLS
+6. [04-security.md](./04-security.md) - Postura de seguridad
+7. [05-design-system.md](./05-design-system.md) - Tokens, paleta, tipografía
+8. [glossary.md](./glossary.md) - Lenguaje de campo ↔ lenguaje de ingeniería
+9. [decisions/](./decisions/) - ADRs: el porqué de cada decisión técnica
+
+La documentación técnica de abajo (ARCHITECTURE.md, STYLING.md, COMPONENTS.md, API.md) es la
+guía **de implementación** del scaffold Next.js, ya actualizada al rumbo de servicios del hogar.
 
 ---
 
@@ -243,7 +263,7 @@ Documentación planeada para el futuro:
 - [ ] `SECURITY.md` - Políticas de seguridad
 - [ ] `DATABASE.md` - Esquema de base de datos (Fase 2)
 - [ ] `AUTHENTICATION.md` - Sistema de autenticación (Fase 2)
-- [ ] `ECOMMERCE.md` - Lógica de e-commerce (Fase 3)
+- [ ] `PORTAL.md` - Lógica del portal transaccional (Fase 3)
 
 ---
 

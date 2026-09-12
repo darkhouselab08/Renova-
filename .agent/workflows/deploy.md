@@ -4,7 +4,7 @@ description: Proceso de despliegue a producción
 
 # Workflow: Despliegue a Producción
 
-Este workflow documenta el proceso de deploy de Renova-Hub.
+Este workflow documenta el proceso de deploy de Renova.
 
 ## Estrategia de Despliegue
 

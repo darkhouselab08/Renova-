@@ -1,4 +1,4 @@
-# 🧩 Guía de Componentes - Renova-Hub
+# 🧩 Guía de Componentes - Renova
 
 > Documentación completa del sistema de componentes
 
@@ -144,9 +144,9 @@ interface NavItem {
 
 ```typescript
 <Hero
-  title="Restauramos tus muebles con pasión"
-  subtitle="Transformamos lo viejo en extraordinario"
-  ctaText="Ver galería"
+  title="Cuidamos tu hogar con precisión"
+  subtitle="Socios verificados, estimador instantáneo"
+  ctaText="Ver servicios"
   ctaHref="/gallery"
   backgroundImage="/images/hero-bg.jpg"
 />

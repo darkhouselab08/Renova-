@@ -1,68 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  --font-inter: "Inter", sans-serif;
-  --font-playfair: "Playfair Display", serif;
+  --color-bg:        #0C0B0A;
+  --color-surface:   #151310;
+  --color-surface-2: #1A1815;
+  --color-text:      #ECE6DA;
+  --color-text-soft: #A79E92;
+  --color-text-mute: #6E6862;
+  --color-gold:      #C6A96A;
+  --color-sage:      #8FA98C;
+  --color-line:      rgba(233,222,201,.08);
+  --color-line-2:    rgba(233,222,201,.15);
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans:  "Inter", system-ui, sans-serif;
+  --radius: 14px;
 }
 
 /* ===== THEME SYSTEM CSS VARIABLES ===== */
+/* Renova — Dark Luxury (fuente de verdad visual: vertex-pather/docs/design/prerenova.html) */
 
-/* Default theme: Hamptons (Evolved from Classic) */
 :root {
-  --color-background: #f8f5f0; /* Cream background */
-  --color-surface: #ffffff;
-  --color-primary: #b89968; /* Sophisticated wood/gold */
-  --color-secondary: #d4c3a3; /* Linen/creams */
-  --color-text: #1a1a1a;
-  --color-accent: #4a3a24; /* Dark wood */
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
+  --color-background: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-primary: var(--color-gold);
+  --color-secondary: var(--color-sage);
+  --color-text: var(--color-text);
+  --color-accent: var(--color-gold);
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-sans);
 }
 
-/* Heritage Innovation (Hybrid) */
-:root[data-theme="hybrid"] {
-  --color-background: #f8f9fa;
-  --color-surface: #ffffff;
-  --color-primary: #d4af37;
-  --color-secondary: #0f172a;
-  --color-text: #1e293b;
-  --color-accent: #059669;
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
-}
-
-/* Classic Luxury Theme (Old) */
-:root[data-theme="classic"] {
-  --color-background: #fef3c7;
-  --color-surface: #ffffff;
-  --color-primary: #d4af37;
-  --color-secondary: #5c4033;
-  --color-text: #0f172a;
-  --color-accent: #059669;
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
-}
-
-/* Dark Luxury Theme */
+/* Theme overrides base on data-theme attribute (Dark Luxury es el default; se mantiene el hook por compatibilidad) */
 :root[data-theme="dark"] {
-  --color-background: #0f172a;
-  --color-surface: #1e293b;
-  --color-primary: #d4af37;
-  --color-secondary: #818cf8;
-  --color-text: #f8fafc;
-  --color-accent: #10b981;
-  --font-heading: var(--font-inter);
-  --font-body: var(--font-inter);
+  --color-background: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-primary: var(--color-gold);
+  --color-secondary: var(--color-sage);
+  --color-text: var(--color-text);
+  --color-accent: var(--color-gold);
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-sans);
 }
 
-/* Utility for Hamptons Gradient */
+:root[data-theme="hybrid"],
+:root[data-theme="classic"] {
+  /* Inherit from :root, or add specific refinements here */
+}
+
+/* Utility Dark Luxury (reemplaza el gradiente Hamptons) */
 .bg-hamptons-gradient {
-  background: radial-gradient(circle at top left, #fdfcfb 0%, #f8f5f0 100%);
+  background: radial-gradient(
+    circle at top left,
+    var(--color-surface) 0%,
+    var(--color-bg) 100%
+  );
 }
 
 /* Smooth transitions when switching themes */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Custom base styles */
@@ -71,11 +70,16 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
 /* Fix for WorldViewport in Grid */
 .world-viewport-container {
-  @apply aspect-video relative overflow-hidden;
+  @apply relative aspect-video overflow-hidden;
 }

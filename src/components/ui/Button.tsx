@@ -15,13 +15,15 @@ export const Button = ({
   className = "",
   ...props
 }: ButtonProps) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
-  
+  const baseStyles =
+    "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
+
   const variants = {
-    primary: "bg-[#b89968] text-white shadow-md hover:bg-[#8b6f47] hover:shadow-lg",
-    secondary: "bg-[#f5f1e8] text-[#8b6f47] hover:bg-[#e8dcc8]",
-    outline: "border-2 border-[#b89968] text-[#b89968] hover:bg-[#b89968]/5",
-    ghost: "text-[#8b6f47] hover:bg-[#f5f1e8]",
+    primary:
+      "bg-primary text-background shadow-md hover:opacity-90 hover:shadow-lg",
+    secondary: "bg-secondary text-accent hover:bg-secondary/80",
+    outline: "border-2 border-primary text-primary hover:bg-primary/10",
+    ghost: "text-accent hover:bg-secondary/50",
   };
 
   const sizes = {

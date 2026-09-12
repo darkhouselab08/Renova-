@@ -1,5 +1,8 @@
 # 🎨 Dirección de Arte y Generación Visual - Renova-Hub
 
+> ⚠️ **Documento histórico (pre-pivote, hasta 12-sep-2026):** describe el concepto anterior de restauración de muebles + Genie 3. Renova pivotó a servicios del hogar (power-washing, mantenimiento, limpieza, pintura) — ver ADR-0004 en `docs/decisions/`. Se conserva como referencia, no como doctrina vigente.
+
+
 > **Concepto**: "Restauración como Alta Costura" (The Louis Vuitton Philosophy)
 
 Este manual define el ADN visual del proyecto, elevando la restauración de muebles al estatus de pieza de colección.

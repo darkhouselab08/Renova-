@@ -1,5 +1,8 @@
 # 🗺️ Roadmap Maestro - Renova-Hub
 
+> ⚠️ **Documento histórico (pre-pivote, hasta 12-sep-2026):** describe el concepto anterior de restauración de muebles + Genie 3. Renova pivotó a servicios del hogar (power-washing, mantenimiento, limpieza, pintura) — ver ADR-0004 en `docs/decisions/`. Se conserva como referencia, no como doctrina vigente.
+
+
 **Visión:** Convertirnos en la plataforma líder de restauración de muebles premium mediante simulación física real (Genie 3).
 
 ---

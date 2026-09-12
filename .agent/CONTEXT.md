@@ -1,5 +1,8 @@
 # Contexto e Investigaciones para Renova-Hub
 
+> ⚠️ **Documento histórico (pre-pivote, hasta 12-sep-2026):** describe el concepto anterior de restauración de muebles + Genie 3. Renova pivotó a servicios del hogar (power-washing, mantenimiento, limpieza, pintura) — ver ADR-0004 en `docs/decisions/`. Se conserva como referencia, no como doctrina vigente.
+
+
 > **Propósito**: Este archivo es para que Jorge pegue información de otros chats, investigaciones, videos de YouTube, artículos, o cualquier recurso que quiera que Gemini conozca para aplicar al proyecto.
 
 ---

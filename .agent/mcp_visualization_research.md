@@ -1,5 +1,8 @@
 # MCPs para Visualización - Investigación
 
+> ⚠️ **Documento histórico (pre-pivote, hasta 12-sep-2026):** describe el concepto anterior de restauración de muebles + Genie 3. Renova pivotó a servicios del hogar (power-washing, mantenimiento, limpieza, pintura) — ver ADR-0004 en `docs/decisions/`. Se conserva como referencia, no como doctrina vigente.
+
+
 ## 🎯 Objetivo
 
 Encontrar MCPs que se integren con Antigravity para facilitar la creación de imágenes y visualización de trabajos, superando las limitaciones de solo trabajar con texto/datos.

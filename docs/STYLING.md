@@ -1,4 +1,4 @@
-# 🎨 Sistema de Diseño - Renova-Hub
+# 🎨 Sistema de Diseño - Renova
 
 > Guía completa del sistema de diseño visual
 
@@ -36,106 +36,51 @@
 
 ## 🎨 Paleta de Colores
 
-### Colores Primarios
+### Colores de Marca (Earthy & Premium)
+
+El sistema de color se basa en la calidez de la madera y la sofisticación de los tonos tierra, contrastando con un blanco puro para un look premium.
 
 ```css
-/* Azul Principal - Confianza y profesionalismo */
---primary-50: #eff6ff;
---primary-100: #dbeafe;
---primary-200: #bfdbfe;
---primary-300: #93c5fd;
---primary-400: #60a5fa;
---primary-500: #3b82f6; /* Principal */
---primary-600: #2563eb;
---primary-700: #1d4ed8;
---primary-800: #1e40af;
---primary-900: #1e3a8a;
+/* Primario: Gold/Wood - Usado para acentos de lujo y CTAs */
+--color-primary: #b89968;
+
+/* Secundario: Cream/Off-white - Fondos suaves y superficies */
+--color-secondary: #f5f1e8;
+
+/* Acento: Deep Wood/Coffee - Textos principales y branding */
+--color-accent: #4a3a24;
+
+/* Fondos y Superficies */
+--color-background: #ffffff;
+--color-foreground: #4a3a24;
 ```
 
-**Uso**:
-
-- Botones principales
-- Links
-- Elementos interactivos
-- Highlights
-
-### Colores Secundarios
+### Escala de Madera (Wood Scale)
 
 ```css
-/* Madera - Conexión con restauración */
---wood-50: #faf8f5;
---wood-100: #f5f1e8;
---wood-200: #e8dcc8;
---wood-300: #d4c0a0;
---wood-400: #b89968;
---wood-500: #8b6f47; /* Secundario */
---wood-600: #6b5435;
---wood-700: #4a3a24;
+--wood-50: #faf8f5; /* Fondos ultra-light */
+--wood-100: #f5f1e8; /* Secondary / Hover backgrounds */
+--wood-200: #e8dcc8; /* Bordes decorativos */
+--wood-300: #d4c0a0; /* Acentos suaves */
+--wood-400: #b89968; /* Primary / Gold accent */
+--wood-500: #8b6f47; /* Texto secundario */
+--wood-600: #6b5435; /* Texto cuerpo / Terciario */
+--wood-700: #4a3a24; /* Accent / Headlines */
 ```
 
-**Uso**:
+### Uso de Tokens
 
-- Acentos
-- Fondos alternativos
-- Elementos decorativos
-
-### Colores Neutros
+En el proyecto utilizamos los tokens integrados en el `@theme` de Tailwind 4.0:
 
 ```css
-/* Grises - Base del diseño */
---gray-50: #f9fafb;
---gray-100: #f3f4f6;
---gray-200: #e5e7eb;
---gray-300: #d1d5db;
---gray-400: #9ca3af;
---gray-500: #6b7280;
---gray-600: #4b5563;
---gray-700: #374151;
---gray-800: #1f2937;
---gray-900: #111827;
-```
-
-### Colores Semánticos
-
-```css
-/* Success */
---success: #10b981;
---success-light: #d1fae5;
-
-/* Warning */
---warning: #f59e0b;
---warning-light: #fef3c7;
-
-/* Error */
---error: #ef4444;
---error-light: #fee2e2;
-
-/* Info */
---info: #3b82f6;
---info-light: #dbeafe;
-```
-
-### Configuración Tailwind
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          50: "#eff6ff",
-          // ... resto de la escala
-          500: "#3b82f6",
-          // ...
-        },
-        wood: {
-          // ... escala de madera
-        },
-      },
-    },
-  },
-};
+/* src/app/globals.css */
+@theme {
+  --color-primary: #b89968;
+  --color-secondary: #f5f1e8;
+  --color-accent: #4a3a24;
+  --color-background: #ffffff;
+  --color-foreground: #4a3a24;
+}
 ```
 
 ---
@@ -536,7 +481,7 @@ xl: '1280px'  // Desktops
       text-gray-900
       leading-tight
     ">
-      Restauramos tus muebles
+      Cuidamos tu hogar con precisión
     </h1>
 
     <p className="
