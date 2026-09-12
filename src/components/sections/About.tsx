@@ -19,7 +19,7 @@ export default function About() {
             >
               <Image
                 src="/images/workshop.jpg"
-                alt="Renova-Hub Workshop"
+                alt="Equipo Renova en obra"
                 width={600}
                 height={400}
                 className="h-auto w-full object-cover"
@@ -47,8 +47,8 @@ export default function About() {
                 color: "var(--color-text)",
               }}
             >
-              Craftsmanship Meets{" "}
-              <span style={{ color: "var(--color-primary)" }}>Innovation</span>
+              Cuidado del Hogar con{" "}
+              <span style={{ color: "var(--color-primary)" }}>Transparencia</span>
             </h2>
 
             <div
@@ -56,24 +56,22 @@ export default function About() {
               style={{ color: "var(--color-text)" }}
             >
               <p>
-                At Renova-Hub, we believe every piece of furniture has a story
-                worth preserving. With over a decade of experience in furniture
-                refinishing, we&apos;ve transformed hundreds of pieces for
-                discerning clients in the Hamptons.
+                Renova conecta a clientes de los Hamptons con compañías socias
+                licenciadas e independientes para power washing, mantenimiento,
+                limpieza y pintura. Cada socio carga su licencia, seguro y
+                permisos antes de trabajar en tu propiedad.
               </p>
 
               <p>
-                Our approach combines traditional craftsmanship with modern
-                techniques and technology. From classic French provincial to
-                bold contemporary styles, we bring your vision to life with
-                meticulous attention to detail.
+                Nuestra plataforma agrega la oferta y da visibilidad total del
+                proyecto: estimador instantáneo, credenciales verificadas y
+                seguimiento en tiempo real, sin sorpresas.
               </p>
 
               <p>
-                What sets us apart is our commitment to sustainability and
-                personalization. Instead of discarding beloved furniture, we
-                give it new life with custom finishes that perfectly match your
-                aesthetic.
+                Lo que nos distingue es la transparencia. El sello
+                &quot;Verificado por Renova&quot; certifica que cada socio
+                cumple con lo que promete, antes de que entre a tu propiedad.
               </p>
             </div>
 
@@ -90,7 +88,7 @@ export default function About() {
                   className="text-sm opacity-70"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Projects Completed
+                  Proyectos Completados
                 </div>
               </div>
 
@@ -105,7 +103,7 @@ export default function About() {
                   className="text-sm opacity-70"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Client Satisfaction
+                  Satisfacción del Cliente
                 </div>
               </div>
 
@@ -114,13 +112,13 @@ export default function About() {
                   className="mb-1 text-3xl font-bold"
                   style={{ color: "var(--color-primary)" }}
                 >
-                  3
+                  4
                 </div>
                 <div
                   className="text-sm opacity-70"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Signature Styles
+                  Servicios del Hogar
                 </div>
               </div>
             </div>
@@ -134,7 +132,7 @@ export default function About() {
                 color: "var(--color-background)",
               }}
             >
-              Start Your Project
+              Solicitar tu Estimado
             </a>
           </div>
         </div>

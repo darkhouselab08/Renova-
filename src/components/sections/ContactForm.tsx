@@ -7,7 +7,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  furnitureType: string;
+  serviceType: string;
   description: string;
   preferredStyle: "classic" | "dark" | "hybrid" | "";
   photos: File[];
@@ -18,7 +18,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    furnitureType: "",
+    serviceType: "",
     description: "",
     preferredStyle: "",
     photos: [],
@@ -84,7 +84,7 @@ export default function ContactForm() {
         name: "",
         email: "",
         phone: "",
-        furnitureType: "",
+        serviceType: "",
         description: "",
         preferredStyle: "",
         photos: [],
@@ -114,15 +114,15 @@ export default function ContactForm() {
               color: "var(--color-text)",
             }}
           >
-            Get Your Free{" "}
-            <span style={{ color: "var(--color-primary)" }}>Quote</span>
+            Obtén tu{" "}
+            <span style={{ color: "var(--color-primary)" }}>Estimado Gratis</span>
           </h2>
           <p
             className="mx-auto max-w-2xl text-lg opacity-80 md:text-xl"
             style={{ color: "var(--color-text)" }}
           >
-            Tell us about your furniture and we&apos;ll provide a detailed
-            estimate within 24 hours.
+            Contanos qué servicio necesitás y te damos un estimado detallado
+            en 24 horas.
           </p>
         </div>
 
@@ -216,17 +216,17 @@ export default function ContactForm() {
 
             <div>
               <label
-                htmlFor="furnitureType"
+                htmlFor="serviceType"
                 className="mb-2 block text-sm font-medium"
                 style={{ color: "var(--color-text)" }}
               >
-                Furniture Type *
+                Servicio *
               </label>
               <select
-                id="furnitureType"
-                name="furnitureType"
+                id="serviceType"
+                name="serviceType"
                 required
-                value={formData.furnitureType}
+                value={formData.serviceType}
                 onChange={handleInputChange}
                 className="w-full rounded-lg border px-4 py-3 focus:ring-2 focus:outline-none"
                 style={{
@@ -235,44 +235,14 @@ export default function ContactForm() {
                   color: "var(--color-text)",
                 }}
               >
-                <option value="">Select type...</option>
-                <option value="dresser">Dresser</option>
-                <option value="nightstand">Nightstand</option>
-                <option value="desk">Desk</option>
-                <option value="cabinet">Cabinet</option>
-                <option value="buffet">Buffet/Sideboard</option>
-                <option value="table">Table</option>
-                <option value="other">Other</option>
+                <option value="">Seleccioná un servicio...</option>
+                <option value="power-washing">Power Washing</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="pintura">Pintura</option>
+                <option value="otro">Otro</option>
               </select>
             </div>
-          </div>
-
-          {/* Preferred Style */}
-          <div className="mb-6">
-            <label
-              htmlFor="preferredStyle"
-              className="mb-2 block text-sm font-medium"
-              style={{ color: "var(--color-text)" }}
-            >
-              Preferred Style
-            </label>
-            <select
-              id="preferredStyle"
-              name="preferredStyle"
-              value={formData.preferredStyle}
-              onChange={handleInputChange}
-              className="w-full rounded-lg border px-4 py-3 focus:ring-2 focus:outline-none"
-              style={{
-                backgroundColor: "var(--color-surface)",
-                borderColor: "var(--color-primary)",
-                color: "var(--color-text)",
-              }}
-            >
-              <option value="">Not sure yet...</option>
-              <option value="classic">Classic Luxury (Whites, Creams)</option>
-              <option value="dark">Dark Luxury (Navy, Charcoal, Green)</option>
-              <option value="hybrid">Heritage (Sage, Gray-Blue)</option>
-            </select>
           </div>
 
           {/* Description */}
@@ -282,7 +252,7 @@ export default function ContactForm() {
               className="mb-2 block text-sm font-medium"
               style={{ color: "var(--color-text)" }}
             >
-              Project Description *
+              Descripción del Proyecto *
             </label>
             <textarea
               id="description"
@@ -297,7 +267,7 @@ export default function ContactForm() {
                 borderColor: "var(--color-primary)",
                 color: "var(--color-text)",
               }}
-              placeholder="Tell us about your furniture piece and what you'd like to achieve..."
+              placeholder="Contanos sobre tu propiedad y qué te gustaría lograr..."
             />
           </div>
 
@@ -307,7 +277,7 @@ export default function ContactForm() {
               className="mb-2 block text-sm font-medium"
               style={{ color: "var(--color-text)" }}
             >
-              Upload Photos (Optional, max 5)
+              Subí Fotos (Opcional, máx. 5)
             </label>
             <div
               className="cursor-pointer rounded-lg border-2 border-dashed p-6 text-center transition-opacity hover:opacity-80"
@@ -381,7 +351,7 @@ export default function ContactForm() {
               color: "var(--color-background)",
             }}
           >
-            {isSubmitting ? "Sending..." : "Get Free Quote"}
+            {isSubmitting ? "Enviando..." : "Obtener Estimado Gratis"}
           </button>
 
           {/* Status Messages */}
@@ -390,7 +360,7 @@ export default function ContactForm() {
               className="mt-4 rounded-lg p-4 text-center"
               style={{ backgroundColor: "#10b981", color: "white" }}
             >
-              ✓ Thank you! We&apos;ll send your quote within 24 hours.
+              ✓ ¡Gracias! Te enviaremos tu estimado dentro de 24 horas.
             </div>
           )}
           {submitStatus === "error" && (
@@ -398,7 +368,7 @@ export default function ContactForm() {
               className="mt-4 rounded-lg p-4 text-center"
               style={{ backgroundColor: "#ef4444", color: "white" }}
             >
-              ✗ Something went wrong. Please try again or email us directly.
+              ✗ Algo salió mal. Intentá de nuevo o escribinos directamente.
             </div>
           )}
         </form>
@@ -433,7 +403,7 @@ export default function ContactForm() {
               (555) 123-4567
             </a>
             <a
-              href="mailto:info@renovahub.com"
+              href="mailto:hola@renova.house"
               className="flex items-center gap-2 transition-opacity hover:opacity-80"
               style={{ color: "var(--color-primary)" }}
             >
@@ -450,7 +420,7 @@ export default function ContactForm() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              info@renovahub.com
+              hola@renova.house
             </a>
           </div>
         </div>

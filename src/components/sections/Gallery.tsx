@@ -32,17 +32,17 @@ export default function Gallery() {
               color: "var(--color-text)",
             }}
           >
-            Our{" "}
+            Nuestros{" "}
             <span style={{ color: "var(--color-primary)" }}>
-              Transformations
+              Proyectos
             </span>
           </h2>
           <p
             className="mx-auto mb-8 max-w-2xl text-lg opacity-80 md:text-xl"
             style={{ color: "var(--color-text)" }}
           >
-            Every piece tells a story. See how we transform worn furniture into
-            stunning statement pieces.
+            Cada propiedad tiene una historia. Mirá cómo nuestros socios
+            transforman fachadas, jardines e interiores.
           </p>
 
           {/* Theme Filter */}

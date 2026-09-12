@@ -1,136 +1,89 @@
 // Sample projects data for Gallery
-// In production, this will come from Supabase (Phase 2)
+// In production, this will come from Supabase (Fase 2 — ver src/types/database.ts)
 
 export interface Project {
   id: string;
   title: string;
-  type: string; // Dresser, Nightstand, Desk, etc.
+  type: string; // Power Washing, Mantenimiento, Limpieza, Pintura
   description: string;
   beforeImage: string;
   afterImage: string;
   technique: string;
   duration: string;
   theme: "classic" | "dark" | "hybrid"; // Theme coherence
-  color: string; // Refinishing color
+  color: string; // Acabado / resultado
   featured?: boolean;
 }
 
 export const sampleProjects: Project[] = [
-  // CLASSIC LUXURY (Light/Cream aesthetic)
+  // POWER WASHING
   {
-    id: "classic-1",
-    title: "French Provincial Dresser",
-    type: "Dresser",
+    id: "powerwash-1",
+    title: "Fachada Restaurada — Southampton",
+    type: "Power Washing",
     description:
-      "Elegant transformation in soft white chalk paint with gold hardware",
+      "Limpieza a presión de fachada y entrada, eliminando moho y sedimento acumulado.",
     beforeImage: "/images/gallery/dresser-1-before.jpg",
     afterImage: "/images/gallery/dresser-1-after.jpg",
-    technique: "Chalk Paint + Distressed Finish",
-    duration: "2 weeks",
-    theme: "classic",
-    color: "Soft White",
+    technique: "Presión controlada + detergente biodegradable",
+    duration: "1 día",
+    theme: "dark",
+    color: "Fachada clara",
     featured: true,
   },
   {
-    id: "classic-2",
-    title: "Antique Nightstand Pair",
-    type: "Nightstand",
-    description: "Restored in cream with hand-rubbed wax and brass hardware",
+    id: "powerwash-2",
+    title: "Deck y Patio — East Hampton",
+    type: "Power Washing",
+    description: "Recuperación de madera de deck exterior antes de temporada.",
     beforeImage: "/images/gallery/dresser-1-before.jpg",
     afterImage: "/images/gallery/nightstand-white-after.jpg",
-    technique: "Hand-Rubbed Wax Finish",
-    duration: "1 week",
-    theme: "classic",
-    color: "Cream",
-  },
-  {
-    id: "classic-3",
-    title: "Victorian Writing Desk",
-    type: "Desk",
-    description: "Natural wood restoration with oil finish",
-    beforeImage: "/images/gallery/table-1-before.jpg",
-    afterImage: "/images/gallery/desk-natural-after.jpg",
-    technique: "Oil Finish",
-    duration: "2 weeks",
-    theme: "classic",
-    color: "Natural Wood",
+    technique: "Lavado a presión + sellador",
+    duration: "1 día",
+    theme: "dark",
+    color: "Madera natural",
   },
 
-  // DARK LUXURY (Navy/Dark aesthetic)
+  // MANTENIMIENTO
   {
-    id: "dark-1",
-    title: "Navy Blue Dresser",
-    type: "Dresser",
-    description: "Bold transformation in glossy navy blue with brass hardware",
-    beforeImage: "/images/gallery/dresser-1-before.jpg",
-    afterImage: "/images/gallery/dresser-1-after.jpg",
-    technique: "High-Gloss Lacquer",
-    duration: "2 weeks",
+    id: "mantenimiento-1",
+    title: "Revisión Pre-Temporada — Bridgehampton",
+    type: "Mantenimiento",
+    description: "Chequeo integral de sistemas exteriores antes del verano.",
+    beforeImage: "/images/gallery/table-1-before.jpg",
+    afterImage: "/images/gallery/desk-natural-after.jpg",
+    technique: "Checklist de 20 puntos",
+    duration: "Medio día",
     theme: "dark",
-    color: "Navy Blue",
-    featured: true,
+    color: "N/A",
   },
+
+  // LIMPIEZA
   {
-    id: "dark-2",
-    title: "Charcoal Gray Nightstand",
-    type: "Nightstand",
-    description: "Modern matte charcoal with gold accents",
+    id: "limpieza-1",
+    title: "Limpieza Profunda de Apertura — Sag Harbor",
+    type: "Limpieza",
+    description: "Limpieza integral de interior previa a la llegada del cliente.",
     beforeImage: "/images/gallery/dresser-1-before.jpg",
     afterImage: "/images/gallery/nightstand-charcoal-after.jpg",
-    technique: "Smooth Matte Paint",
-    duration: "1 week",
+    technique: "Protocolo de limpieza profunda",
+    duration: "1 día",
     theme: "dark",
-    color: "Charcoal Gray",
-  },
-  {
-    id: "dark-3",
-    title: "Forest Green Executive Desk",
-    type: "Desk",
-    description: "Sophisticated deep green with satin finish",
-    beforeImage: "/images/gallery/table-1-before.jpg",
-    afterImage: "/images/gallery/desk-green-after.jpg",
-    technique: "Satin Finish",
-    duration: "3 weeks",
-    theme: "dark",
-    color: "Deep Forest Green",
+    color: "N/A",
   },
 
-  // HERITAGE INNOVATION (Hybrid aesthetic)
+  // PINTURA
   {
-    id: "hybrid-1",
-    title: "Sage Green Farmhouse Dresser",
-    type: "Dresser",
-    description: "Two-tone finish: sage green base with natural wood top",
-    beforeImage: "/images/gallery/dresser-1-before.jpg",
-    afterImage: "/images/gallery/dresser-sage-after.jpg",
-    technique: "Two-Tone Mixed Finish",
-    duration: "2 weeks",
-    theme: "hybrid",
-    color: "Sage Green + Wood",
-    featured: true,
-  },
-  {
-    id: "hybrid-2",
-    title: "Gray-Blue Vintage Nightstand",
-    type: "Nightstand",
-    description: "Soft gray-blue with mixed metal hardware",
-    beforeImage: "/images/gallery/dresser-1-before.jpg",
-    afterImage: "/images/gallery/nightstand-grayblue-after.jpg",
-    technique: "Mixed Finish",
-    duration: "1 week",
-    theme: "hybrid",
-    color: "Gray-Blue",
-  },
-  {
-    id: "hybrid-3",
-    title: "Taupe Secretary Desk",
-    type: "Desk",
-    description: "Warm taupe base preserving natural wood elements",
+    id: "pintura-1",
+    title: "Pintura Exterior — Westhampton",
+    type: "Pintura",
+    description: "Renovación de pintura exterior con acabado satinado.",
     beforeImage: "/images/gallery/table-1-before.jpg",
-    afterImage: "/images/gallery/desk-natural-after.jpg",
-    technique: "Preserved Elements",
-    duration: "3 weeks",
-    theme: "hybrid",
-    color: "Warm Taupe",
+    afterImage: "/images/gallery/desk-green-after.jpg",
+    technique: "Acabado satinado, 2 manos",
+    duration: "3 días",
+    theme: "dark",
+    color: "Gris paloma",
+    featured: true,
   },
 ];

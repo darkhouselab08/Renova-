@@ -6,28 +6,28 @@ export default function Testimonials() {
       name: "Sarah Mitchell",
       location: "Southampton, NY",
       rating: 5,
-      text: "Renova-Hub transformed my grandmother's dresser into a stunning centerpiece for my bedroom. The attention to detail and craftsmanship exceeded my expectations!",
+      text: "Renova coordinó el power washing y la pintura de mi fachada antes de la temporada. El socio que enviaron fue puntual y el resultado impecable.",
       image: "/images/testimonials/client-1.jpg",
-      project: "French Provincial Dresser",
-      style: "classic", // Classic Luxury
+      project: "Power Washing + Pintura",
+      style: "classic",
     },
     {
       name: "Michael Chen",
       location: "East Hampton, NY",
       rating: 5,
-      text: "I was skeptical about refinishing my vintage desk, but the team at Renova-Hub brought it back to life beautifully. The navy finish is absolutely perfect!",
+      text: "Pedí el estimado un lunes y el martes ya tenía el equipo de mantenimiento en casa. Transparencia total en cada paso del proyecto.",
       image: "/images/testimonials/client-2.jpg",
-      project: "Executive Desk",
-      style: "dark", // Dark Modern
+      project: "Mantenimiento pre-temporada",
+      style: "dark",
     },
     {
       name: "Emily Rodriguez",
       location: "Bridgehampton, NY",
       rating: 5,
-      text: "Professional, timely, and the results are incredible. They helped me choose the perfect sage green for my nightstands. Highly recommend!",
+      text: "La limpieza profunda antes de nuestra apertura de temporada fue impecable. Profesionales, puntuales y con excelente comunicación.",
       image: "/images/testimonials/client-3.jpg",
-      project: "Nightstand Pair",
-      style: "heritage", // Heritage
+      project: "Limpieza de apertura",
+      style: "heritage",
     },
   ];
 

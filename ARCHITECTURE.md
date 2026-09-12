@@ -22,36 +22,37 @@
 
 ## 🎯 Visión General
 
-**Renova-Hub** es una plataforma web premium para restauración de muebles con **simulación 3D interactiva** (Genie 3). El proyecto está diseñado para ser:
+**Renova** es una plataforma de servicios integrales del hogar (power washing, mantenimiento,
+limpieza y pintura) para residencias de alto nivel en The Hamptons, NY. Conecta clientes con
+compañías socias licenciadas e independientes (modelo plataforma/referidos, ver ADR-0004). El
+proyecto está diseñado para ser:
 
 - **Escalable**: Arquitectura modular que crece con el negocio
 - **Mantenible**: Código limpio y bien documentado
 - **Performante**: Optimizado para SEO y velocidad
-- **Innovador**: Primera plataforma de restauración con simulación física real
+- **Transparente**: Credenciales de socios verificadas, seguimiento de proyecto en tiempo real
 - **Profesional**: Diseño premium y experiencia de usuario excepcional
 
 ### Objetivos del Proyecto
 
-1. **Fase 1 - Preparación Arquitectónica** ✅ (Completada 2026-02-09)
-   - Componentes preparados para Genie 3
-   - Tipos TypeScript para simulaciones
-   - WorldViewport component implementado
-   - Captura de coordenadas de interacción
+1. **Fase 1 - Pivote de Scaffold** ✅ (pivote de identidad y contenido completado)
+   - Identidad Dark Luxury (tokens Tailwind, Fraunces)
+   - Contenido de servicios del hogar (Hero, Header, Footer, secciones)
+   - Estructura de dominio: `src/lib/supabase/`, `src/types/database.ts`, rutas dashboard/portal/api
 
-2. **Fase 1.5 - Validación con Clientes** (En planificación)
-   - Deploy a Vercel
-   - "Fake door" testing
-   - Validación de propuesta de valor
+2. **Fase 1.5 - Landing y Estimador** (en progreso)
+   - Deploy a Vercel (`renova.house`)
+   - Réplica de la maqueta congelada `prerenova.html` (4 servicios + magazine + estimador)
+   - Validación de propuesta de valor con clientes reales
 
-3. **Fase 2 - Backend + API** (Pendiente acceso Genie 3)
-   - Backend Python/FastAPI
-   - Integración Google Cloud Vertex AI
-   - Endpoint `/api/genie/interact`
+3. **Fase 2 - Backend Conectado**
+   - Conexión real a Supabase (proyectos, finanzas, materiales, agents_log)
+   - RLS y autenticación de socios/clientes
 
-4. **Fase 3 - Integración Completa**
-   - Renderizado de streams 3D
-   - Dashboard premium
-   - E-commerce con Stripe
+4. **Fase 3 - Portal Transaccional**
+   - Dashboard interno (proyectos, finanzas, agentes)
+   - Portal de cliente con magic link
+   - Verificación de socios (licencia, seguro, COI)
 
 ---
 
@@ -257,8 +258,8 @@ renova-hub/
 ```typescript
 // ✅ Bueno: Componentes pequeños y componibles
 <Hero>
-  <Hero.Title>Restauramos tus muebles</Hero.Title>
-  <Hero.Subtitle>Con pasión y profesionalismo</Hero.Subtitle>
+  <Hero.Title>Cuidamos tu hogar con precisión</Hero.Title>
+  <Hero.Subtitle>Socios verificados, transparencia total</Hero.Subtitle>
   <Hero.CTA>Ver galería</Hero.CTA>
 </Hero>
 
@@ -330,7 +331,7 @@ Pages      → app/page.tsx
 - `Hero.tsx` - Sección principal con CTA ✅ **Usa WorldViewport**
 - `Gallery.tsx` - Galería de transformaciones ✅ **Usa WorldViewport**
 - `About.tsx` - Información de la empresa
-- `Process.tsx` - Proceso de restauración
+- `Process.tsx` - Proceso de solicitud y ejecución del servicio
 - `Testimonials.tsx` - Reseñas de clientes
 - `ContactForm.tsx` - Formulario de contacto
 

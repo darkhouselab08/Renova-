@@ -27,7 +27,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="text-accent text-2xl font-bold tracking-tighter">
-            RENOVA<span className="text-primary">-HUB</span>
+            RENOVA
           </span>
         </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
             href="#gallery"
             className="text-accent hover:text-primary text-sm font-medium transition-colors"
           >
-            Galería
+            Servicios
           </Link>
           <Link
             href="#about"
@@ -58,7 +58,7 @@ export default function Header() {
             Contacto
           </Link>
           <Button variant="primary" size="sm">
-            Cotizar Proyecto
+            Obtener Estimado
           </Button>
         </nav>
 

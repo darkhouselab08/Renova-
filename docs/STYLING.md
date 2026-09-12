@@ -481,7 +481,7 @@ xl: '1280px'  // Desktops
       text-gray-900
       leading-tight
     ">
-      Restauramos tus muebles
+      Cuidamos tu hogar con precisión
     </h1>
 
     <p className="

@@ -11,12 +11,12 @@ export default function Footer() {
               href="/"
               className="mb-6 block text-2xl font-bold tracking-tighter text-[#4a3a24]"
             >
-              RENOVA<span className="text-[#b89968]">-HUB</span>
+              RENOVA
             </Link>
             <p className="max-w-sm text-[#6b5435]">
-              Especialistas en la restauración premium de muebles con técnicas
-              artesanales y acabados contemporáneos inspirados en las últimas
-              tendencias.
+              Plataforma de servicios del hogar: power washing, mantenimiento,
+              limpieza y pintura, ejecutados por socios verificados y licenciados
+              con transparencia de principio a fin.
             </p>
           </div>
 
@@ -59,16 +59,15 @@ export default function Footer() {
               Contacto
             </h4>
             <ul className="space-y-4 text-[#6b5435]">
-              <li>Lima, Perú</li>
-              <li>info@renovahub.pe</li>
-              <li>+51 987 654 321</li>
+              <li>The Hamptons, NY</li>
+              <li>hola@renova.house</li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-[#e8dcc8] pt-8 text-sm text-[#6b5435] md:flex-row">
           <p>
-            © {new Date().getFullYear()} Renova-Hub. Todos los derechos
+            © {new Date().getFullYear()} Renova. Todos los derechos
             reservados.
           </p>
           <div className="flex gap-6">

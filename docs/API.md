@@ -146,7 +146,7 @@ Por ahora, la landing page es estática. No hay endpoints activos.
 
 #### POST /api/quotes
 
-**Propósito**: Solicitar cotización de restauración
+**Propósito**: Solicitar estimado de servicio del hogar
 
 **Request**:
 
@@ -155,7 +155,7 @@ Por ahora, la landing page es estática. No hay endpoints activos.
   "name": string,
   "email": string,
   "phone": string,
-  "furnitureType": "chair" | "table" | "cabinet" | "other",
+  "serviceType": "power_washing" | "maintenance" | "cleaning" | "painting",
   "description": string,
   "images": string[], // URLs de imágenes subidas
   "urgency": "low" | "medium" | "high"
@@ -180,12 +180,12 @@ Por ahora, la landing page es estática. No hay endpoints activos.
 
 #### GET /api/gallery
 
-**Propósito**: Obtener galería de transformaciones
+**Propósito**: Obtener galería de proyectos
 
 **Query Params**:
 
 ```typescript
-?category=all|chairs|tables|cabinets
+?category=all|power_washing|maintenance|cleaning|painting
 &limit=10
 &offset=0
 ```
@@ -213,140 +213,51 @@ Por ahora, la landing page es estática. No hay endpoints activos.
 
 ---
 
-### Fase 3: E-commerce
+### Fase 3: Portal Transaccional
 
-#### GET /api/products
+Endpoints sobre el modelo de datos de `src/types/database.ts` (`Project`, `Finance`,
+`LogisticsMaterial`, `AgentLog`). Todo INSERT lleva `source` obligatorio (ver `docs/04-security.md`).
 
-**Propósito**: Listar productos disponibles
+#### GET /api/projects
 
-**Query Params**:
-
-```typescript
-?category=all|restored|new
-&sort=price|date|popularity
-&order=asc|desc
-&limit=20
-&offset=0
-```
+**Propósito**: Listar proyectos (dashboard interno / portal de cliente)
 
 **Response**:
 
 ```typescript
 {
   "success": true,
-  "data": [
-    {
-      "id": string,
-      "name": string,
-      "description": string,
-      "price": number,
-      "images": string[],
-      "category": string,
-      "stock": number,
-      "featured": boolean
-    }
-  ],
-  "total": number,
-  "hasMore": boolean
+  "data": Project[]
 }
 ```
 
 ---
 
-#### GET /api/products/[id]
+#### GET /api/finances
 
-**Propósito**: Obtener detalles de un producto
+**Propósito**: Listar movimientos financieros de un proyecto
 
 **Response**:
 
 ```typescript
 {
   "success": true,
-  "data": {
-    "id": string,
-    "name": string,
-    "description": string,
-    "price": number,
-    "images": string[],
-    "category": string,
-    "stock": number,
-    "dimensions": {
-      "width": number,
-      "height": number,
-      "depth": number
-    },
-    "materials": string[],
-    "beforeAfter": {
-      "before": string,
-      "after": string
-    }
-  }
+  "data": Finance[]
 }
 ```
 
 ---
 
-#### POST /api/cart
+#### GET /api/agents
 
-**Propósito**: Agregar producto al carrito
-
-**Request**:
-
-```typescript
-{
-  "productId": string,
-  "quantity": number
-}
-```
+**Propósito**: Consultar el registro de acciones de agentes (auditoría)
 
 **Response**:
 
 ```typescript
 {
   "success": true,
-  "cart": {
-    "items": [
-      {
-        "productId": string,
-        "quantity": number,
-        "price": number
-      }
-    ],
-    "total": number
-  }
-}
-```
-
----
-
-#### POST /api/checkout
-
-**Propósito**: Procesar pago (Stripe)
-
-**Request**:
-
-```typescript
-{
-  "cartId": string,
-  "shippingAddress": {
-    "street": string,
-    "city": string,
-    "state": string,
-    "zipCode": string,
-    "country": string
-  },
-  "paymentMethod": string // Stripe payment method ID
-}
-```
-
-**Response**:
-
-```typescript
-{
-  "success": true,
-  "orderId": string,
-  "paymentIntent": string,
-  "status": "pending" | "confirmed"
+  "data": AgentLog[]
 }
 ```
 

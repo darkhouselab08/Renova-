@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,16 +10,21 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
-  title: "Renova-Hub | Restauración de Muebles Premium",
+  title: "Renova | Servicio Integral del Hogar",
   description:
-    "Transformamos tus muebles con técnicas profesionales de restauración. Galería de proyectos, cotizaciones y tienda online.",
+    "Power washing, mantenimiento, limpieza y pintura para tu hogar. Socios verificados, estimador instantáneo y seguimiento transparente de tu proyecto.",
   keywords: [
-    "restauración de muebles",
-    "muebles vintage",
-    "renovación",
-    "pintura chalky",
-    "tapicería",
+    "power washing",
+    "mantenimiento del hogar",
+    "limpieza profesional",
+    "pintura residencial",
+    "servicios del hogar Hamptons",
   ],
 };
 
@@ -30,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`}>
         <ThemeProvider>
           <Header />
           {children}

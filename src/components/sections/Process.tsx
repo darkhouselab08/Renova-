@@ -4,9 +4,9 @@ export default function Process() {
   const steps = [
     {
       number: "01",
-      title: "Share Your Vision",
+      title: "Pide tu Estimado",
       description:
-        "Upload photos of your furniture and tell us about your style preferences. We'll provide a detailed quote within 24 hours.",
+        "Contanos qué servicio necesitás (power washing, mantenimiento, limpieza o pintura). Te damos un estimado detallado en 24 horas.",
       icon: (
         <svg
           className="h-12 w-12"
@@ -31,9 +31,9 @@ export default function Process() {
     },
     {
       number: "02",
-      title: "Expert Transformation",
+      title: "Socio Verificado Ejecuta",
       description:
-        "Our skilled craftsmen refinish your piece with premium materials and techniques. We'll keep you updated throughout the process.",
+        "Un socio licenciado y asegurado, con el sello Verificado por Renova, hace el trabajo. Seguimiento del proyecto en tiempo real.",
       icon: (
         <svg
           className="h-12 w-12"
@@ -52,9 +52,9 @@ export default function Process() {
     },
     {
       number: "03",
-      title: "Delivered with Care",
+      title: "Proyecto Cerrado con Transparencia",
       description:
-        "We deliver your beautifully refinished furniture right to your door. Enjoy your transformed piece for years to come!",
+        "Recibís confirmación de entrega y evidencia del trabajo terminado, todo desde el mismo portal.",
       icon: (
         <svg
           className="h-12 w-12"

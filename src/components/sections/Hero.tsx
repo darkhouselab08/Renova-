@@ -13,20 +13,21 @@ export default function Hero() {
           <div className="animate-fade-in border-wood-200 mb-8 inline-flex items-center gap-2 rounded-full border bg-white/60 px-6 py-2 shadow-sm backdrop-blur-md">
             <span className="text-xl">✨</span>
             <span className="text-accent text-[10px] font-semibold tracking-[0.2em] uppercase sm:text-xs">
-              Mobiliario con Alma y Legado
+              Servicio Integral del Hogar
             </span>
           </div>
 
           {/* Título principal con refinamiento tipográfico */}
           <h1 className="animate-slide-up text-accent mb-8 text-5xl leading-[1.1] font-bold tracking-tight transition-all sm:text-7xl lg:text-8xl">
-            Elevamos la esencia de tus{" "}
-            <span className="text-primary font-serif italic">clásicos</span>
+            Cuidamos tu hogar con{" "}
+            <span className="text-primary font-serif italic">precisión</span>
           </h1>
 
           {/* Subtítulo */}
           <p className="animate-slide-up text-accent/80 mx-auto mb-12 max-w-2xl text-lg leading-relaxed font-light [animation-delay:200ms] sm:text-xl">
-            Arte, técnica y exclusividad en restauración premium. Convertimos lo
-            atemporal en un lujo contemporáneo para tu espacio.
+            Power washing, mantenimiento, limpieza y pintura, ejecutados por socios
+            verificados. Un estimador instantáneo y seguimiento transparente de tu
+            proyecto, de principio a fin.
           </p>
 
           {/* CTAs con hover effects mejorados */}
@@ -36,7 +37,7 @@ export default function Hero() {
               size="lg"
               className="group min-w-[200px] shadow-xl transition-all hover:scale-105"
             >
-              Explorar Colección
+              Obtener Estimado
               <span className="ml-2 transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -46,16 +47,16 @@ export default function Hero() {
               size="lg"
               className="min-w-[200px] transition-all hover:bg-white/50"
             >
-              Solicitar Auditoría
+              Ver Servicios
             </Button>
           </div>
 
           {/* Stats refinados con micro-animaciones */}
           <div className="border-wood-200/50 mx-auto mt-24 grid max-w-2xl grid-cols-3 gap-8 border-t pt-12">
             {[
-              { value: "500+", label: "Legados preservados" },
-              { value: "15", label: "Años de maestría" },
-              { value: "98%", label: "Visión compartida" },
+              { value: "4", label: "Servicios del hogar" },
+              { value: "100%", label: "Socios verificados" },
+              { value: "24h", label: "Respuesta al estimado" },
             ].map((stat, i) => (
               <div
                 key={i}
