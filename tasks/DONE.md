@@ -27,6 +27,17 @@
 - Commit + push a `feature/pivot-home-services`. PR #1 actualizado, listo a un clic de merge.
 - Responsable: Dev Full-Stack + Claude Code · Aprueba: Franco
 
+## 2026-09-12 — MERGE OFICIAL · PR #1 fusionado a `develop`
+
+- Franco revisó la landing con `npm run dev` (fotos reales incluidas) y dio luz verde explícita
+  en la sesión: **"ya vi la pagina con las fotos como antes puedes hacer el merge doy luz verde"**.
+- `gh pr merge 1 --merge` — merge commit `c1c3535` en `origin/develop`.
+- Rama `feature/pivot-home-services` conservada (no borrada).
+- `develop` local sincronizado (`git fetch` + `checkout develop` + `pull`), `npm run build`
+  verificado verde sobre `develop` post-merge.
+- `main` **no se tocó** — sigue siendo un peldaño aparte que Franco decide cuándo dar.
+- Responsable: Claude Code · Aprobado por: Franco (luz verde en sesión, 12-sep-2026)
+
 ## 2026-09-12 — PIVOTE-01 · Pivotar el repo al rumbo de servicios del hogar
 
 - Orden: `vertex-pather/PENDING_TASK_renova_pivot.md`
