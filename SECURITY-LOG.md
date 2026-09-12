@@ -6,5 +6,7 @@
 | Fecha | Hallazgo | Severidad | Estado | Ref |
 | :--- | :--- | :--- | :--- | :--- |
 | 2026-09-12 | Revisión quirúrgica post-pivote (PIVOTE-01): sin `service_role` key en código/docs, `.env.local` correctamente en `.gitignore`, `.env.local.example` sin valores, sin `innerHTML`/concatenación de HTML en componentes nuevos. | — | Cerrado | tasks/DONE.md#pivote-01 |
-| 2026-09-12 | Email/teléfono en texto plano en `Footer.tsx` / `ContactForm.tsx` (pre-existente, heredado del scaffold). | Baja | Abierto (punto 3 de `docs/04-security.md`) | docs/04-security.md#checklist |
-| 2026-09-12 | Formulario de contacto sin anti-spam / rate-limiting (pre-existente). | Media | Abierto (punto 5 de `docs/04-security.md`) | docs/04-security.md#checklist |
+| 2026-09-12 | `ContactForm.tsx` (scaffold viejo, sin anti-spam) eliminado en PIVOTE-02 — el estimador de `prerenova` no usa formulario libre, usa chips + WhatsApp. Punto 5 de `docs/04-security.md` deja de aplicar a la landing actual. | Media | Cerrado (componente removido) | tasks/DONE.md#pivote-02 |
+| 2026-09-12 | Revisión quirúrgica PIVOTE-02: Magazine Takeover implementado con JSX/datos tipados, no `innerHTML`/concatenación de strings — cierra proactivamente el punto 1 de `docs/04-security.md` para el componente que más se le parecía en `prerenova`. | — | Cerrado | src/components/landing/RenovaLanding.tsx |
+| 2026-09-12 | Email/teléfono en texto plano en el footer/contacto de la landing (`hello@renova.house`, `tel:+WA_NUMBER`) — así está en el plano aprobado `prerenova`, no es un artefacto del scaffold. Sigue siendo scrapeable por bots. | Baja | Abierto (punto 3 de `docs/04-security.md`) | docs/04-security.md#checklist |
+| 2026-09-12 | Sin CSP (Content-Security-Policy) definida. | Media | Abierto (punto 4 de `docs/04-security.md`) | docs/04-security.md#checklist |

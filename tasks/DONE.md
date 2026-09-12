@@ -17,3 +17,28 @@
   (README, ARCHITECTURE, STYLING, COMPONENTS, API, BUSINESS_PLAN, INDEX) sin duplicar.
 - `npm run build` verificado sin errores.
 - Responsable: Dev Full-Stack + Claude Code · Aprueba: Franco
+
+## 2026-09-12 — PIVOTE-02 · Landing = copia FIEL de `prerenova` (corrige lo visual de PIVOTE-01)
+
+- Orden: `vertex-pather/PENDING_TASK_renova_landing_prerenova.md`
+- Plano: `vertex-pather/docs/design/prerenova_STRUCTURE.html`
+- Landing reconstruida en `src/components/landing/RenovaLanding.tsx` (client component) + hoja de
+  estilos dedicada `src/app/landing.css` — réplica estructural fiel: nav, hero, offer band,
+  estimador (chips de servicio/tamaño, cálculo de precio, link a WhatsApp), 4 tarjetas de
+  servicio, Magazine Takeover (overlay a pantalla completa por servicio, con cover/spread/full/
+  duo-o-collage/quote/cta), why-band, trends, folio "our work", contacto, footer.
+- Magazine implementado con JSX/datos tipados (no `innerHTML`/concatenación de strings) —
+  cumple proactivamente el punto 1 de `docs/04-security.md` (XSS) sin perder fidelidad visual.
+- Imágenes: placeholders en gradiente Dark Luxury (VI.12 — sin base64). Pendiente sustituir por
+  fotos reales optimizadas cuando Franco las entregue.
+- `WA_NUMBER` se mantuvo como el mismo placeholder del plano, hasta que Franco dé el número real.
+- Secciones del scaffold viejo de muebles (`Hero`, `Gallery`, `About`, `Process`, `Testimonials`,
+  `ContactForm`, y sus dependencias huérfanas `WorldViewport`, `SimulationModal`, `Modal`,
+  `ThemeSwitcher`, `lib/projects.ts`, `lib/analytics.tsx`, `types/simulation.ts`) eliminadas del
+  árbol de código (conservadas fuera del repo, no en el historial de git, por si hace falta
+  revisarlas).
+- `Header`/`Footer` de la app ya no envuelven la landing (tiene su propio nav/footer, fiel al
+  plano); se movieron a layouts propios de `(dashboard)` y `(client)` para las páginas internas.
+- Plomería de PIVOTE-01 (Supabase, types, rutas, docs, tokens, Fraunces) intacta, sin tocar.
+- `npm run build` y `npm run lint` verificados sin errores nuevos.
+- Responsable: Dev Full-Stack + Claude Code · Aprueba: Franco

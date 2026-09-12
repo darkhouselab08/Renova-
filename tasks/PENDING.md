@@ -4,4 +4,8 @@
 
 ## En curso / pendientes
 
-_(vacío por ahora — siguiente: landing completa réplica de `prerenova.html`, conexión real a Supabase)_
+- [ ] Conexión real a Supabase (leer/escribir leads del estimador).
+- [ ] Fotos reales optimizadas (WebP/AVIF en `public/`, `next/image` con `object-cover`) para
+  hero, servicios, magazine y folio — hoy son placeholders en gradiente.
+- [ ] Número real de WhatsApp del negocio (hoy `WA_NUMBER` en `RenovaLanding.tsx` es un
+  placeholder).

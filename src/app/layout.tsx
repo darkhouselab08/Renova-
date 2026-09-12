@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const inter = Inter({
@@ -16,15 +14,15 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Renova | Servicio Integral del Hogar",
+  title: "Renova Home Services",
   description:
-    "Power washing, mantenimiento, limpieza y pintura para tu hogar. Socios verificados, estimador instantáneo y seguimiento transparente de tu proyecto.",
+    "Renova — Winter-Ready para tu casa en los Hamptons: power-wash y sellado de decks, patios y piedra antes de la primera helada. Estimado al instante. Reserva por WhatsApp.",
   keywords: [
     "power washing",
-    "mantenimiento del hogar",
-    "limpieza profesional",
-    "pintura residencial",
-    "servicios del hogar Hamptons",
+    "home maintenance",
+    "home cleaning",
+    "painting",
+    "Hamptons home services",
   ],
 };
 
@@ -34,13 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`}>
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
