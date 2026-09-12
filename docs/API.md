@@ -1,4 +1,4 @@
-# 🔌 API Documentation - Renova-Hub
+# 🔌 API Documentation - Renova
 
 > Documentación de API Routes y endpoints
 

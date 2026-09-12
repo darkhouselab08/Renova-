@@ -1,4 +1,4 @@
-# 🧩 Guía de Componentes - Renova-Hub
+# 🧩 Guía de Componentes - Renova
 
 > Documentación completa del sistema de componentes
 

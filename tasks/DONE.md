@@ -2,6 +2,31 @@
 
 > Historial de trabajos terminados (con fecha). Se mueven aquí desde `PENDING.md`.
 
+## 2026-09-12 — CIERRE · Commitear equipo de agentes, documentar y dejar el merge listo
+
+- Orden: `vertex-pather/PENDING_TASK_renova_cierre.md`
+- Commiteado el equipo de agentes (Operador/Cowork): `CLAUDE.md` (Gerente de Proyecto),
+  `.claude/agents/{frontend,backend-datos,diseno,seguridad-qa,devops}.md`,
+  `docs/departamentos/{README,01-05}.md`, `COWORK_INBOX.md`.
+- Sección "Equipo de agentes y departamentos" agregada a `README.md` (apunta a
+  `docs/departamentos/README.md` y `CLAUDE.md`).
+- **Limpieza de documentación encontrada en la revisión:** `OVERVIEW.md` seguía describiendo el
+  concepto viejo de restauración de muebles — reescrito completo al rumbo actual. Títulos sueltos
+  "Renova-Hub" corregidos a "Renova" en `ARCHITECTURE.md`, `docs/API.md`, `docs/COMPONENTS.md`,
+  `docs/STYLING.md`, `docs/BUSINESS_PLAN.md`. Aviso de "documento histórico, pre-pivote" agregado
+  (sin borrar contenido) a `.strategy/ROADMAP.md`, `.strategy/MAPA_MENTAL.md`,
+  `.agent/business_viability_genie3.md`, `.agent/mcp_visualization_research.md`,
+  `.agent/visual_generation_prompts.md`, `.agent/CONTEXT.md`, `.agent/jorge_profile.md` — todos
+  describían el concepto anterior (muebles + simulación Genie 3). `ARCHITECTURE.md` también lleva
+  un aviso de vigencia sobre sus secciones técnicas más viejas (WorldViewport/Genie 3), pendientes
+  de una limpieza completa aparte.
+- `.git/index.lock` huérfano eliminado antes de operar git.
+- Revisión de seguridad quirúrgica de cierre: sin `service_role`, `innerHTML`, ni secretos
+  hardcodeados en `src/` ni en la documentación nueva. Registrado en `SECURITY-LOG.md`.
+- `npm run build` y `npm run lint` verificados sin errores/warnings nuevos.
+- Commit + push a `feature/pivot-home-services`. PR #1 actualizado, listo a un clic de merge.
+- Responsable: Dev Full-Stack + Claude Code · Aprueba: Franco
+
 ## 2026-09-12 — PIVOTE-01 · Pivotar el repo al rumbo de servicios del hogar
 
 - Orden: `vertex-pather/PENDING_TASK_renova_pivot.md`

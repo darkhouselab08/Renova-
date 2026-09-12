@@ -1,4 +1,4 @@
-# 🎨 Sistema de Diseño - Renova-Hub
+# 🎨 Sistema de Diseño - Renova
 
 > Guía completa del sistema de diseño visual
 

@@ -1,4 +1,4 @@
-# 💼 Plan de Negocio - Renova-Hub
+# 💼 Plan de Negocio - Renova
 
 > **Estado**: 📋 Pendiente - Desarrollar en Fase 2+
 

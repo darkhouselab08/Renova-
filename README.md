@@ -13,11 +13,20 @@ Este repositorio es el **producto** (la web + el backend de Renova). Es un repo 
 | Pregunta | Respuesta corta |
 | :--- | :--- |
 | **¿Qué es?** | Landing + estimador + (más adelante) dashboard interno y portal de cliente para un negocio real de servicios en los Hamptons. |
-| **¿Estado hoy?** | Scaffold **Next.js + TypeScript + Tailwind** (heredado de la etapa previa "Renova-Hub") ya **pivotado** al rumbo actual: identidad Dark Luxury, contenido de servicios del hogar, estructura de dominio (`src/lib/supabase/`, `src/types/database.ts`, rutas de dashboard/portal/api). Backend Supabase **por conectar** en producción (cliente tipado listo, pendiente de credenciales reales). |
+| **¿Estado hoy?** | Landing en producción-lista: **réplica fiel de la maqueta `prerenova`** con identidad Dark Luxury, estimador funcional y fotos reales conectadas (Power-Washing, Painting). Estructura de dominio (`src/lib/supabase/`, `src/types/database.ts`, rutas de dashboard/portal/api) lista. Backend Supabase **por conectar** en producción (cliente tipado listo, pendiente de credenciales reales). |
 | **¿Stack de producción?** | **Next.js (App Router) + TypeScript + Tailwind CSS v4 + Supabase + Vercel.** |
 | **¿Dónde está el código?** | Aquí (`renova`, remoto `darkhouselab08/Renova-`). El cerebro/estrategia está en el repo `vertex-pather`. |
-| **¿Qué sigue?** | Conectar Supabase real, avanzar la landing hacia la maqueta congelada `prerenova.html` (ver `docs/02-roadmap.md`). |
+| **¿Qué sigue?** | Conectar Supabase real, fotos reales de Maintenance/Cleaning, número real de WhatsApp (ver `tasks/PENDING.md`). |
 | **¿Quién responde por qué?** | Ver [`docs/OWNERSHIP.md`](docs/OWNERSHIP.md). |
+
+---
+
+## Equipo de agentes y departamentos
+
+El trabajo técnico se reparte entre un **Gerente de proyecto** (`CLAUDE.md`, quien lee Claude Code
+al entrar al repo) y **5 departamentos** especializados como sub-agentes en `.claude/agents/`:
+Frontend/Producto, Backend/Datos, Diseño/Marca, Seguridad/QA, DevOps/Deploy. Organigrama humano
+completo en [`docs/departamentos/README.md`](docs/departamentos/README.md).
 
 ---
 

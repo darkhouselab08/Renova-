@@ -1,8 +1,16 @@
-# 🏗️ Arquitectura Técnica - Renova-Hub
+# 🏗️ Arquitectura Técnica - Renova
 
 > **Versión**: 2.0.0  
 > **Última actualización**: 2026-02-10  
 > **Autor**: Jorge Franco
+
+> ⚠️ **Nota de vigencia (12-sep-2026):** la sección "Visión General" y "Arquitectura de Carpetas"
+> están al día con el pivote a servicios del hogar. Las secciones más técnicas de abajo
+> (Integraciones "Genie 3", `WorldViewport`, `simulation.ts`, y ejemplos de `Hero`/`Gallery` con
+> el folder tree viejo) describen el **concepto anterior de restauración de muebles** y quedaron
+> desactualizadas — esos componentes ya no existen en el código (ver `tasks/DONE.md#pivote-01`,
+> `#pivote-02`). Se conservan como referencia histórica hasta una limpieza completa; para la
+> arquitectura real y vigente, ver el folder tree de esta misma sección y `docs/01-architecture.md`.
 
 ---
 

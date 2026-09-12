@@ -1,14 +1,18 @@
-# Renova-Hub: Transformando Muebles en los Hamptons
+# Renova: Servicios del Hogar en los Hamptons
 
 ## Descripción del Proyecto para Usuarios
 
 ---
 
-## 🎯 ¿Qué es Renova-Hub?
+## 🎯 ¿Qué es Renova?
 
-**Renova-Hub** es un servicio premium de **refinishing de muebles** (pintura y acabados personalizados) ubicado en los Hamptons, Nueva York.
+**Renova** es una plataforma de **servicios integrales del hogar** para residencias de alto nivel
+en los Hamptons, NY: power-washing, mantenimiento, limpieza y pintura, bajo un solo punto de
+contacto.
 
-**En pocas palabras:** Tomamos tus muebles viejos o desgastados (dressers, nightstands, desks) y los transformamos con pintura profesional y acabados modernos.
+**En pocas palabras:** conectamos al cliente con compañías socias licenciadas e independientes
+para cada oficio. El cliente pide un estimado, un socio verificado hace el trabajo, y Renova da
+la transparencia (credenciales verificadas, seguimiento del proyecto) de principio a fin.
 
 ---
 
@@ -16,127 +20,88 @@
 
 ### **Para el Cliente (Súper Simple):**
 
-1. **📸 Envías Fotos** → Visitas nuestra web y subes fotos de tu mueble
-2. **💬 Recibes Quote** → Te enviamos presupuesto en 24 horas (gratis)
-3. **🎨 Eliges Estilo** → Classic, Dark, o Heritage Innovation
-4. **🚚 Recogemos** → Vamos por tu mueble
-5. **✨ Entregamos** → Te lo devolvemos transformado
+1. **💬 Elige un servicio** → Power-Washing, Mantenimiento, Limpieza o Pintura en el estimador
+2. **📏 Indica el tamaño** (solo Power-Washing tiene precio instantáneo por tamaño)
+3. **💰 Ve el estimado** → Precio al instante, o "estimado gratis in situ" según el servicio
+4. **📲 Confirma por WhatsApp** → Un mensaje con los datos ya armado, un clic
+5. **✅ El socio verificado ejecuta** → Licenciado, asegurado, con seguimiento transparente
 
 ---
 
 ## 👥 ¿Para Quién es?
 
-- Propietarios de casas en Hamptons
-- Diseñadores de interiores
-- Personas que aman sus muebles pero quieren actualizarlos
-- Quienes buscan alternativa sostenible vs comprar nuevo
+- Propietarios de casas de temporada en los Hamptons (Southampton, Sag Harbor, Sagaponack,
+  Bridgehampton, Water Mill, East Hampton, Amagansett, Montauk)
+- Quienes necesitan cerrar la propiedad antes del invierno ("Winter-Ready")
+- Quienes quieren un solo punto de contacto para varios oficios del hogar
 
 **Por qué nos eligen:**
 
-- ✅ Más económico que comprar nuevo
-- ✅ Sostenible (reutilizamos)
-- ✅ Personalizado (tú eliges color)
-- ✅ Calidad profesional
-- ✅ Servicio completo
-
----
-
-## 💰 Precios de Ejemplo
-
-- Nightstand pequeño: $300-500
-- Dresser mediano: $600-900
-- Desk grande: $800-1,200
+- ✅ Estimado claro en segundos, sin sorpresas
+- ✅ Socios licenciados y asegurados, verificados por Renova
+- ✅ Un solo mensaje coordina más de un servicio
+- ✅ Respuesta en menos de un día hábil
 
 ---
 
 ## 🌐 La Tecnología (Simple)
 
-**Lo que ves:** Página web bonita con galería y formulario de contacto.
+**Lo que ves:** Landing con estimador interactivo y un "magazine" a pantalla completa por cada
+servicio (fotos reales, qué incluye, y una cita).
 
-**Lo que hace:** Muestra nuestro trabajo, permite solicitar quotes, funciona en todos los dispositivos.
+**Lo que hace:** Calcula el estimado, arma el mensaje de WhatsApp con los datos correctos, y
+deja al socio o al cliente un canal directo de contacto.
 
-**El futuro (Fase 2):** Portal online para ver progreso + IA que analiza fotos y sugiere colores.
-
-**Por ahora:** Simple y efectivo. Website + Email.
+**El futuro (Fase 2+):** el estimador escribe el lead en Supabase (hoy solo abre WhatsApp);
+dashboard interno para proyectos/finanzas/agentes; portal de cliente con magic link.
 
 ---
 
-## 📊 Estado Actual (Febrero 2026)
+## 📊 Estado Actual (12-sep-2026)
 
 ### **✅ Completado:**
 
-- Diseño del sitio web
-- Sistema de 3 estilos
-- Galería con 9 proyectos
-- Formulario de contacto
-- Plan financiero
+- Pivote del scaffold heredado ("Renova-Hub", concepto de muebles) al rumbo actual
+- Identidad visual **Dark Luxury** (Fraunces, paleta obsidiana/oro/salvia)
+- Landing réplica fiel de la maqueta aprobada `prerenova`: hero, estimador, 4 servicios con
+  magazine takeover, trends, folio de trabajos, contacto
+- Fotos reales conectadas (Power-Washing, Painting, hero, folio) — Maintenance y Cleaning con
+  placeholder elegante por ahora
+- Estructura de dominio lista: cliente de Supabase, tipos (`Project`, `Finance`,
+  `LogisticsMaterial`, `AgentLog`), rutas de dashboard/portal/api
+- Equipo de agentes (Gerente + 5 departamentos) para repartir el trabajo técnico
 
-### **🔄 En Progreso:**
+### **🔄 En progreso / próximo:**
 
-- Deploy a internet
-- Email profesional
-- Google Analytics
-
-### **📅 Próximo (Marzo):**
-
-- Lanzamiento oficial
-- Primeros 3 clientes
-- Fotos reales de proyectos
-
----
-
-## 🚀 Las 3 Fases
-
-### **Fase 1: MVP (AHORA)**
-
-- **Objetivo:** Conseguir primeros clientes
-- **Costo:** $1/mes
-- **Resultado:** Sitio web funcional
-
-### **Fase 2: Portal (Mes 2-3)**
-
-- **Cuándo:** Con 3+ proyectos
-- **Costo:** $6/mes
-- **Resultado:** Clientes ven progreso online
-
-### **Fase 3: IA (Mes 4-6)**
-
-- **Cuándo:** Con 10+ proyectos/mes
-- **Costo:** $20/mes
-- **Resultado:** Automatización completa
+- Aprobación de merge del PR #1 (Fundador)
+- Fotos reales de Maintenance y Cleaning
+- Número real de WhatsApp del negocio
+- Conexión real a Supabase (el estimador escribe el lead, no solo abre WhatsApp)
+- Deploy a `renova.house` (Vercel)
 
 ---
 
-## 🎨 Los 3 Estilos
+## 🎨 Identidad visual
 
-### **Classic Luxury**
-
-Blancos, cremas, dorados → Elegante y atemporal
-
-### **Dark Luxury**
-
-Navy, charcoal, verde → Moderno y dramático
-
-### **Heritage Innovation**
-
-Sage, gray-blue, taupe → Mezcla tradicional y moderno
+**Dark Luxury** — obsidiana (`#0C0B0A`), oro (`#C6A96A`), salvia (`#8FA98C`), tipografía Fraunces
+(serif) + Inter (sans). Ver `docs/05-design-system.md` para los tokens completos.
 
 ---
 
 ## 👨‍💼 El Equipo
 
-**Jorge Franco** - Fundador, Restaurador Principal
-**Antigravity AI** - Desarrollo técnico y automatización
+**Jorge Franco** — Fundador.
+**Equipo de agentes IA** — Gerente de proyecto + 5 departamentos (Frontend, Backend/Datos,
+Diseño, Seguridad/QA, DevOps). Ver `CLAUDE.md` y `docs/departamentos/`.
 
 ---
 
 ## 📞 Contacto
 
-**Email:** info@renovahub.com
-**Phone:** (555) 123-4567
-**Ubicación:** Hamptons, NY
+**Email:** hello@renova.house
+**Ubicación:** The Hamptons, NY
 
 ---
 
-**Última actualización:** Febrero 8, 2026
-**Versión:** MVP 1.0
+**Última actualización:** 12-sep-2026
+**Ver también:** `README.md` (mapa técnico), `docs/00-overview.md` (doctrina del negocio).
