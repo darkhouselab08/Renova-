@@ -5,9 +5,12 @@ import { useEffect, useState } from "react";
 /**
  * Réplica fiel de la maqueta aprobada `prerenova`
  * (vertex-pather/docs/design/prerenova_STRUCTURE.html).
- * Imágenes: placeholders en gradiente (VI.12 — sin base64, sin binarios en el repo).
- * Cuando Franco entregue las fotos reales, reemplazar por next/image con fill + object-cover.
+ * Fotos reales aprobadas por Franco en public/images/img01–17.webp (VI.12 — WebP optimizado,
+ * sin base64). Maintenance y Cleaning todavía no tienen fotos reales: usan el placeholder en
+ * gradiente hasta que Franco las entregue.
  */
+
+const IMG = (n: number) => `/images/img${String(n).padStart(2, "0")}.webp`;
 
 // Placeholder hasta que Franco entregue el número real de WhatsApp del negocio.
 const WA_NUMBER = "16316031643";
@@ -102,6 +105,14 @@ interface MagEntry {
   cap: string;
   quote: string;
   hasCollage: boolean;
+  // Fotos reales (opcional — si falta, se usa el placeholder en gradiente PH[key]).
+  cover?: string;
+  coverContain?: boolean; // no recortar (ej. la obra de arte de Painting)
+  spread?: string;
+  full?: string;
+  collage?: string;
+  duoA?: string;
+  duoB?: string;
 }
 
 const MAG: MagEntry[] = [
@@ -118,7 +129,11 @@ const MAG: MagEntry[] = [
     incP: "Power-washing of patios, steps, walkways and decks. Outdoor furniture stored, tables and delicate pieces covered, and a final walk-through before winter sets in.",
     cap: "Recent work · deck power-washing · the Hamptons",
     quote: "Done in the temperature window, before the first freeze.",
-    hasCollage: false,
+    hasCollage: true,
+    cover: IMG(9),
+    spread: IMG(10),
+    full: IMG(11),
+    collage: IMG(12),
   },
   {
     key: "maintenance",
@@ -163,7 +178,13 @@ const MAG: MagEntry[] = [
     incP: "Interiors and exteriors, stain and seal, kitchens and cabinetry, trim and detail work — finished clean.",
     cap: "Recent work · the Hamptons",
     quote: "Prep done right; finishes that last.",
-    hasCollage: true,
+    hasCollage: false,
+    cover: IMG(13),
+    coverContain: true,
+    spread: IMG(14),
+    full: IMG(15),
+    duoA: IMG(16),
+    duoB: IMG(17),
   },
 ];
 
@@ -264,7 +285,14 @@ export default function RenovaLanding() {
       </nav>
 
       <header className="hero" id="top">
-        <div className="bg" />
+        <div
+          className="bg"
+          style={{
+            backgroundImage: `url(${IMG(1)})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 42%",
+          }}
+        />
         <div className="inner">
           <div className="eyebrow">The Hamptons · Home Services</div>
           <h1>
@@ -427,7 +455,7 @@ export default function RenovaLanding() {
           style={{
             height: 400,
             marginBottom: 6,
-            backgroundImage: `linear-gradient(180deg,rgba(12,11,10,.20),rgba(12,11,10,.55) 62%,rgba(12,11,10,.94)), ${PH.powerwash}`,
+            backgroundImage: `linear-gradient(180deg,rgba(12,11,10,.20),rgba(12,11,10,.55) 62%,rgba(12,11,10,.94)), url(${IMG(2)})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             borderBottom: "1px solid rgba(198,169,106,.15)",
@@ -445,6 +473,10 @@ export default function RenovaLanding() {
           <div className="grid">
             {SVC_ORDER.map((key, i) => {
               const s = SVC[key];
+              const CARD_IMG: Partial<Record<ServiceKey, string>> = {
+                powerwash: IMG(3),
+                painting: IMG(4),
+              };
               const cardCopy: Record<ServiceKey, string> = {
                 powerwash:
                   "Power-wash patios, decks and walkways, then close the season right — outdoor furniture stored, tables and pieces covered and protected before winter.",
@@ -465,7 +497,12 @@ export default function RenovaLanding() {
                     setMagOpen(i);
                   }}
                 >
-                  <div className="ph" style={{ backgroundImage: PH[key] }} />
+                  <div
+                    className="ph"
+                    style={{
+                      backgroundImage: CARD_IMG[key] ? `url(${CARD_IMG[key]})` : PH[key],
+                    }}
+                  />
                   <div className="t">
                     <h3>{s.label}</h3>
                     <p>{cardCopy[key]}</p>
@@ -573,14 +610,14 @@ export default function RenovaLanding() {
             <h2>Real homes, real crews.</h2>
           </div>
           <div className="folio">
-            <div className="tile" style={{ backgroundImage: PH.powerwash }}>
+            <div className="tile" style={{ backgroundImage: `url(${IMG(5)})` }} />
+            <div className="tile" style={{ backgroundImage: `url(${IMG(6)})` }}>
               <span className="lab">Before</span>
             </div>
-            <div className="tile" style={{ backgroundImage: PH.powerwash }}>
+            <div className="tile" style={{ backgroundImage: `url(${IMG(7)})` }}>
               <span className="lab">After</span>
             </div>
-            <div className="tile" style={{ backgroundImage: PH.maintenance }} />
-            <div className="tile" style={{ backgroundImage: PH.painting }} />
+            <div className="tile" style={{ backgroundImage: `url(${IMG(8)})` }} />
           </div>
         </div>
       </section>
@@ -644,7 +681,13 @@ export default function RenovaLanding() {
             </div>
             <section
               className="mag-cover"
-              style={{ background: PH[activeMag.key], backgroundSize: "cover", backgroundPosition: "center" }}
+              style={{
+                background: activeMag.cover ? `url(${activeMag.cover})` : PH[activeMag.key],
+                backgroundColor: activeMag.coverContain ? "#0e0c09" : undefined,
+                backgroundSize: activeMag.coverContain ? "contain" : "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
             >
               <div className="mag-cover-in">
                 <span className="mag-kicker">{activeMag.kicker}</span>
@@ -659,25 +702,42 @@ export default function RenovaLanding() {
             <div className="mag-body">
               <p className="mag-intro">{activeMag.intro}</p>
               <div className="mag-spread">
-                <div className="mag-img" style={{ background: PH[activeMag.key] }} />
+                <div
+                  className="mag-img"
+                  style={{ background: activeMag.spread ? `url(${activeMag.spread})` : PH[activeMag.key] }}
+                />
                 <div className="mag-txt">
                   <h3>{activeMag.incT}</h3>
                   <p>{activeMag.incP}</p>
                 </div>
               </div>
               <figure className="mag-full">
-                <div className="mag-img" style={{ background: PH[activeMag.key] }} />
+                <div
+                  className="mag-img"
+                  style={{ background: activeMag.full ? `url(${activeMag.full})` : PH[activeMag.key] }}
+                />
               </figure>
               <div className="mag-cap">{activeMag.cap}</div>
               {activeMag.hasCollage ? (
                 <figure className="mag-collage">
-                  <div className="cimg" style={{ backgroundImage: PH[activeMag.key] }} />
+                  <div
+                    className="cimg"
+                    style={{
+                      backgroundImage: activeMag.collage ? `url(${activeMag.collage})` : PH[activeMag.key],
+                    }}
+                  />
                   <figcaption>Recent work · selected jobs · the Hamptons</figcaption>
                 </figure>
               ) : (
                 <div className="mag-duo">
-                  <div className="mag-img" style={{ background: PH[activeMag.key] }} />
-                  <div className="mag-img" style={{ background: PH[activeMag.key] }} />
+                  <div
+                    className="mag-img"
+                    style={{ background: activeMag.duoA ? `url(${activeMag.duoA})` : PH[activeMag.key] }}
+                  />
+                  <div
+                    className="mag-img"
+                    style={{ background: activeMag.duoB ? `url(${activeMag.duoB})` : PH[activeMag.key] }}
+                  />
                 </div>
               )}
               <blockquote className="mag-quote">{activeMag.quote}</blockquote>

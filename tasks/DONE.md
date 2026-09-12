@@ -42,3 +42,29 @@
 - Plomería de PIVOTE-01 (Supabase, types, rutas, docs, tokens, Fraunces) intacta, sin tocar.
 - `npm run build` y `npm run lint` verificados sin errores nuevos.
 - Responsable: Dev Full-Stack + Claude Code · Aprueba: Franco
+
+## 2026-09-12 — PIVOTE-03 · Conectar fotos aprobadas + limpiar + dejar oficial
+
+- Orden: `vertex-pather/PENDING_TASK_renova_imagenes_oficial.md`
+- Fotos reales (`public/images/img01–17.webp`, aprobadas por Franco) conectadas en
+  `RenovaLanding.tsx`: hero, fondo de la banda de servicios, tarjetas de Power-Washing y
+  Painting, folio "our work" (4 tiles, con labels Before/After en img06/img07 según el mapa de
+  la orden), y los magazines de Power-Washing y Painting completos.
+- **Corrección de fidelidad encontrada en la revisión:** PIVOTE-02 había invertido la lógica de
+  collage/dúo del magazine respecto al original `prerenova` (Power-Washing debía usar
+  `mag-collage` con una sola imagen ancha, Painting debía usar `mag-duo` con dos imágenes
+  distintas — quedó al revés). Corregido: Power-Washing → collage (`img12`), Painting → dúo
+  (`img16`/`img17`).
+- Portada del magazine de Painting (`img13`, la obra abstracta) con `background-size:contain` en
+  vez de `cover`, para no recortarla — es la pieza, no un fondo decorativo.
+- Maintenance y Cleaning **sin fotos reales todavía** — se quedan con el placeholder en gradiente
+  elegante, anotado en `tasks/PENDING.md`.
+- Restos del scaffold viejo de muebles (`public/images/gallery/`, `public/images/hero/`,
+  `public/images/workshop.jpg`) movidos — no borrados — a `renova/_PARA_BORRAR_media/`, tras
+  confirmar con `grep` que ningún componente los referencia.
+- Revisión de seguridad quirúrgica: sin superficie nueva de XSS/SSRF (imágenes servidas desde
+  rutas relativas fijas del propio dominio). Registrado en `SECURITY-LOG.md`.
+- `npm run build` y `npm run lint` verificados sin errores nuevos.
+- **PR #1 actualizado, listo para oficializar** — espera solo la aprobación de merge de Franco
+  tras revisar `npm run dev`.
+- Responsable: Dev Full-Stack + Claude Code · Aprueba merge: Franco
